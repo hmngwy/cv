@@ -311,7 +311,7 @@ article.csguide {
 }
 article.csguide p:first-of-type {
   font-size: 1.3em;
-  text-align: left;
+  text-align: center;
   margin: auto;
   max-width: 715px;
   margin-bottom: 2em;
