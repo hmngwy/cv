@@ -1,0 +1,263 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <title>Pat Ambrosio</title>
+
+    <base href="/cv/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Neuton:400,300,400italic,700,200' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="/assets/css/nostrap.css">
+    <link rel="stylesheet" href="/assets/bower/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="/assets/bower/chartist/dist/chartist.js"></script>
+    <script src="/assets/bower/Hyphenator/Hyphenator.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+      Hyphenator.run();
+    </script>
+  </head>
+  <body>
+
+    
+<nav class="main">
+  <ul>
+    <li ><a href="./">Summary</a></li>
+    <li ><a href="./career.html">Career</a></li>
+    <li ><a href="./personal.html">Personal</a></li>
+  </ul>
+</nav>
+<nav class="main sub">
+  <ul>
+    <li ><a href="./skills/management.html">Management</a></li>
+    <li ><a href="./skills/frontend.html">Front End</a></li>
+    <li ><a href="./skills/backend.html">Back End</a></li>
+    <li ><a href="./skills/sysad.html">Sys Ad</a></li>
+    <li ><a href="./skills/uiux.html">UI/UX</a></li>
+  </ul>
+</nav>
+
+<div class="hyphenate">
+
+  <main>
+
+    <section id="landing">
+
+      <article>
+        <div class="wrap">
+        <p>My skills range from UI Engineering and Design, System Design, to Management and Technical Leadership. Below is a detail of these skills ranked relatively in terms of my proficiency and confidence.</p>
+        </div>
+      </article>
+
+
+      <article>
+        <div class="with-chart">
+          <div class="text">
+            <h4>Management and Leadership</h4>
+            <p>Familiar with Waterfall, Agile, and Lean. But also aware that these models should not be employed blindly, and instead be modified to adapt to an office's culture and workflow, augmenting its capabilities while being as minimally invasive as possible.</p>
+            <p>I acknowledge that good communication makes susccessful teams. My range of skills allow me to communicate well between technical and non-technical staff, as well as presenting cases to stakeholders in a manner they can participate in.</p>
+            <p>I believe my experience will speak more of my Management skills. Please click through below.</p>
+            <h6><a href="#">Experience</a></h6>
+          </div>
+          <div class="chart ct-mgt ct-golden-section"></div>
+        </div>
+
+        <div class="wrap">
+          <div class="management experience">
+
+            <h5>SEOP Asia, Inc.</h5>
+
+            <p>
+              Hired as a programmer in a Web Development firm, I stood out and gained a Management role, I promptly worked on maximizing the team output and delivery times on my own initiative. The team started off with the following environment:
+            </p>
+
+            <ul>
+              <li>8 Developers in non-specializing roles</li>
+              <li>Basic workload distribution through Email</li>
+              <li>No source code control</li>
+              <li>No engineering process</li>
+              <li>No project management and tracking</li>
+              <li>Delivering approx. 10 projects per month</li>
+            </ul>
+
+            <p>
+              I fully transitioned this team and workflow in the course of a year to the following:
+            </p>
+
+            <ul>
+              <li>25 Developers</li>
+              <li>Specialized subteams and roles</li>
+              <li>Workload distribution through Project Management software: ActiveCollab
+                <ul>
+                  <li>Transitioning both Developers and Stakeholders into the system</li>
+                  <li>Making both Developers and Stakeholders accountable for their corresponding deliverables</li>
+                </ul>
+              </li>
+              <li>Employed SubVersion (SVN) source code control for Developer accountability and deployment</li>
+              <li>A modified Waterfall approach, where a subteam is responsible for delivery in each step</li>
+              <li>Custom tracking software that uses data from ActiveCollab and SVN for Stakeholders to see where a project is in the Waterfall</li>
+              <li>Custom notification software to keep stakeholders and parties updated with their project's progress</li>
+              <li>At the peak of implementation, we are delivering around 50 projects per month</li>
+            </ul>
+
+            <p>We've achieved at least 200% increase in output. All while still delivering on existing business. The department continued to use and improve on the workflow for the next three years.</p>
+          </div>
+        </div>
+      </article>
+      <script>
+      var data = {
+        labels: ['Technical', 'Engineering', 'Workload'],
+        series: [45, 35, 20]
+      };
+
+      var options = {
+        labelInterpolationFnc: function(value) {
+          return value[0]
+        },
+        donut: true
+      };
+
+      var responsiveOptions = [
+        ['screen and (min-width: 450px)', {
+          chartPadding: 40,
+          labelOffset: 50,
+          labelDirection: 'explode',
+          labelInterpolationFnc: function(value) {
+            return value;
+          }
+        }],
+        ['screen and (min-width: 1024px)', {
+          chartPadding: 40,
+          labelOffset: 60,
+        }]
+      ];
+
+      new Chartist.Pie('.ct-mgt', data, options, responsiveOptions);
+      </script>
+
+      <article>
+        <div class="with-chart">
+          <div class="text">
+            <h3>Front End</h3>
+            <p>These are based on my confidence/proficiency in practical use, basically the rating is higher in tech where I struggle less.</p>
+            <h5>Approach</h5>
+            <p>I highly prioritize scalability, leaner solutions also prevail. Tooling and build scripts optimize code, I prefer that all optimization is done before deployment. If applicable, I prefer the code to be completely agnostic, such that we can iterate the UI without having to re-deploy the Back End.</p>
+            <h6><a href="#">Experience</a></h6>
+          </div>
+          <div class="chart ct-frontend ct-golden-section"></div>
+        </div>
+      </article>
+      <script>
+      new Chartist.Bar('.ct-frontend', {
+        labels: [
+          'HTML5, XML, Schema',
+          'CSS, LESS, SASS',
+          'JS, Backbone, Angular',
+          'Bower, Grunt, Assemble'
+        ],
+        series: [
+          [90, 85, 80, 90],
+          [80, 70, 65, 85],
+          [50, 45, 20, 40]
+        ]
+      }, {
+        seriesBarDistance: 10,
+        axisX: {
+          offset: 60
+        },
+        axisY: {
+          offset: 0,
+          labelInterpolationFnc: function(value) {
+            return '';
+          },
+          scaleMinSpace: 15
+        }
+      }, [
+        ['screen and (min-width: 450px)', {
+          chartPadding: 20
+        }],
+        ['screen and (min-width: 1024px)', {
+          chartPadding: 40,
+        }]
+      ]);
+      </script>
+
+      <article>
+        <div class="with-chart">
+          <div class="text">
+            <h3>Back End</h3>
+            <p>The ranking is based on my experience/preference in practical use, the rating is higher for tech where I feel I've been more successful.</p>
+            <h5>Approach</h5>
+            <p>A combination of <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> and <a href="https://en.wikipedia.org/wiki/KISS_principle">KISS</a> best describes it albeit loosely, even though these terms are overused. I apply this not only in code management, but also in the business-logic level<sup>[?]</sup>.</p>
+            <!-- E.g. I never let the app render a resource on request, it will be pre-rendered when a relevant dataset is updated and then cached in memory. -->
+            <p>Meanwhile, Modularity is relative, it grows with code footprint. The larger and mature the project grows, the more normalized my code modularity becomes. I oftentimes avoid writing modular code that won't be used more than once.</p>
+            <h6><a href="#">Experience</a></h6>
+          </div>
+          <div class="chart ct-backend ct-golden-section"></div>
+        </div>
+      </article>
+      <script>
+      new Chartist.Bar('.ct-backend', {
+        labels: [
+          'JS, Python, PHP 5',
+          'Express, Django',
+          'Mongo, MySQL, GQL',
+          'Redis, Memcache',
+        ],
+        series: [
+          [90, 80, 80, 60],
+          [50, 40, 60, 40],
+          [40, 0, 30, 0]
+        ]
+      }, {
+        seriesBarDistance: 10,
+        axisX: {
+          offset: 60
+        },
+        axisY: {
+          offset: 0,
+          labelInterpolationFnc: function(value) {
+            return '';
+          },
+          scaleMinSpace: 15
+        }
+      }, [
+        ['screen and (min-width: 450px)', {
+          chartPadding: 40
+        }],
+        ['screen and (min-width: 1024px)', {
+          chartPadding: 40,
+          labelOffset: 60,
+        }]
+      ]);
+      </script>
+
+      <article>
+        <div class="wrap">
+          <h3>UI/UX</h3>
+          <p>I am fully capable in UI Development but frankly I have a lot to learn in UX Design. I am particularly interested in the process of improving user productivity, to further my user-centric approach.</p>
+          <h5>UI Development</h5>
+          <p>I am familiar with OOCSS principles, and I'm not a stranger to developing granular and modular UI elements.</p>
+          <h6><a href="#">Experience</a></h6>
+          <h5>UX Design</h5>
+          <p>I am aware of the UPA UX Design process, but also aware of the fact that it is not a process that is applied strictly. Most team's forego some steps, and some follow a much leaner approach. I am interested in learning this hands-on with a team.</p>
+        </div>
+      </article>
+
+    </section> <!-- skills -->
+
+
+  </main>
+</div>
+
+
+    <footer>
+    </footer>
+  </body>
+</html>

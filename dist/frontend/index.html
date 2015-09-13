@@ -1,0 +1,109 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <title>Pat Ambrosio</title>
+
+    <base href="/cv/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Neuton:400,300,400italic,700,200' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="/assets/css/nostrap.css">
+    <link rel="stylesheet" href="/assets/bower/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="/assets/bower/chartist/dist/chartist.js"></script>
+    <script src="/assets/bower/Hyphenator/Hyphenator.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+      Hyphenator.run();
+    </script>
+  </head>
+  <body>
+
+    <nav class="main">
+      <ul>
+        <li ><a href="./">Summary</a></li>
+        <li ><a href="./career.html">Career</a></li>
+        <li ><a href="./personal.html">Personal</a></li>
+      </ul>
+    </nav>
+    <nav class="main sub">
+      <ul>
+        <li ><a href="./skills/management.html">Management</a></li>
+        <li ><a href="./skills/frontend.html">Front End</a></li>
+        <li ><a href="./skills/backend.html">Back End</a></li>
+        <li ><a href="./skills/sysad.html">Sys Ad</a></li>
+        <li ><a href="./skills/uiux.html">UI/UX</a></li>
+      </ul>
+    </nav>
+
+<div class="wrap">
+
+  <main>
+
+    <section id="frontend">
+      <header>
+        <h3>Front End</h3>
+        <nav>
+          <ul>
+            <li><a href="/frontend/">Skills</a></li>
+            <li><a href="/frontend/approach.html">Approach</a></li>
+            <li><a href="/frontend/experience.html">Experience</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="skills">
+        <p class="intro">The scores are relative to each other in the same class. These are based on my confidence/proficiency in practical use, basically the rating is higher in tech where I struggle less. This is in now way relative to mastery on each technology, there's always something out there I don't know yet.</p>
+
+        <div class="chart ct-frontend ct-golden-section"></div>
+        <script>
+        new Chartist.Bar('.ct-frontend', {
+          labels: [
+            'HTML5, XML, Schema, OpenGraph',
+            'CSS, SASS, LESS',
+            'JS, Backbone, Angular',
+            'Bower, Grunt, Assemble'
+          ],
+          series: [
+            [90, 85, 80, 90],
+            [80, 50, 60, 70],
+            [50, 45, 10, 20],
+            [20, 0, 0, 0]
+          ]
+        }, {
+          seriesBarDistance: 10,
+          axisX: {
+            offset: 60
+          },
+          axisY: {
+            offset: 0,
+            labelInterpolationFnc: function(value) {
+              return '';
+            },
+            scaleMinSpace: 15
+          }
+        });
+        </script>
+
+        <article>
+          <p>I prefer using vanilla front end tech if the requirements are simple enough to allow it, otherwise I scale up. For mid-level complexity I reach for Backbone, and for single page applications - Angular.</p>
+          <p>I am wholly impartial to CSS frameworks like Bootstrap and Foundation, you can achieve similar effect with much less bloat.</p>
+          <p>I am looking forward to using React and Meteor in the future, when I come into a project that would imply their necessity.</p>
+        </article>
+
+      </div> <!--frontend skills-->
+
+  </main>
+</div>
+
+
+    <footer>
+    </footer>
+  </body>
+</html>

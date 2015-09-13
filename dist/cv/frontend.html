@@ -1,0 +1,106 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <title>Pat Ambrosio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Neuton:400,300,400italic,700,200' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="/assets/css/nostrap.css">
+    <link rel="stylesheet" href="/assets/bower/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="/assets/bower/chartist/dist/chartist.js"></script>
+    <script src="/assets/bower/Hyphenator/Hyphenator.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+      Hyphenator.run();
+    </script>
+  </head>
+  <body>
+
+    
+<nav class="main">
+  <ul>
+    <li ><a href="/">Summary</a></li>
+    <li ><a href="./">Career</a></li>
+    <li ><a href="#">Personal</a></li>
+  </ul>
+</nav>
+<nav class="main sub">
+  <ul>
+    <li class="active"><a href="/">Management</a></li>
+    <li ><a href="./skills.html">Frontend</a></li>
+    <li ><a href="./">Backend</a></li>
+    <li ><a href="#">Sys Ad</a></li>
+    <li ><a href="#">UI/UX</a></li>
+  </ul>
+</nav>
+
+<div class="hyphenate">
+
+  <main>
+
+    <section id="landing">
+
+      <article>
+        <div class="with-chart">
+          <div class="text">
+            <h3>Front End</h3>
+            <p>These are based on my confidence/proficiency in practical use, basically the rating is higher in tech where I struggle less.</p>
+            <h5>Approach</h5>
+            <p>I highly prioritize scalability, leaner solutions also prevail. Tooling and build scripts optimize code, I prefer that all optimization is done before deployment. If applicable, I prefer the code to be completely agnostic, such that we can iterate the UI without having to re-deploy the Back End.</p>
+          </div>
+          <div class="chart ct-frontend ct-golden-section"></div>
+        </div>
+      </article>
+      <script>
+      new Chartist.Bar('.ct-frontend', {
+        labels: [
+          'HTML5, XML, Schema',
+          'CSS, LESS, SASS',
+          'JS, Backbone, Angular',
+          'Bower, Grunt, Assemble'
+        ],
+        series: [
+          [90, 85, 80, 90],
+          [80, 70, 65, 85],
+          [50, 45, 20, 40]
+        ]
+      }, {
+        seriesBarDistance: 10,
+        axisX: {
+          offset: 60
+        },
+        axisY: {
+          offset: 0,
+          labelInterpolationFnc: function(value) {
+            return '';
+          },
+          scaleMinSpace: 15
+        }
+      }, [
+        ['screen and (min-width: 450px)', {
+          chartPadding: 20
+        }],
+        ['screen and (min-width: 1024px)', {
+          chartPadding: 40,
+        }]
+      ]);
+      </script>
+
+    </section> <!-- skills -->
+
+
+  </main>
+</div>
+
+
+    <footer>
+    </footer>
+  </body>
+</html>

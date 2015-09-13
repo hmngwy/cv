@@ -1,0 +1,96 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <title>Pat Ambrosio</title>
+
+    <base href="/cv/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Neuton:400,300,400italic,700,200' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="/assets/css/nostrap.css">
+    <link rel="stylesheet" href="/assets/bower/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="/assets/bower/chartist/dist/chartist.js"></script>
+    <script src="/assets/bower/Hyphenator/Hyphenator.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+      Hyphenator.run();
+    </script>
+  </head>
+  <body>
+
+    <div class="wrap">
+
+  <main>
+
+    <section id="frontend">
+      <header>
+        <h3>Front End</h3>
+        <nav>
+          <ul>
+            <li><a href="/frontend/">Skills</a></li>
+            <li><a href="/frontend/approach.html">Approach</a></li>
+            <li><a href="/frontend/experience.html">Experience</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="approach">
+        <header>
+          <h3>Approach</h3>
+          <p class="intro">I use a prioritized approach with a simple premise, I do not add complexity when it is not desperately needed.</p>
+        </header>
+        <div class="chart ct-frontend-priority ct-golden-section"></div>
+        <script>
+        new Chartist.Pie('.ct-frontend-priority', {
+          labels: ['Scalability', 'Brevity / Lean', 'Extensibility', 'Modularity'],
+          series: [50, 35, 15, 10]
+        }, {
+          labelInterpolationFnc: function(value) {
+            return value[0]
+          },
+          donut: true
+        }, [
+          ['screen and (min-width: 640px)', {
+            chartPadding: 40,
+            labelOffset: 50,
+            labelDirection: 'explode',
+            labelInterpolationFnc: function(value) {
+              return value;
+            }
+          }],
+          ['screen and (min-width: 1024px)', {
+            chartPadding: 40,
+            labelOffset: 60,
+          }]
+        ]);
+        </script>
+
+        <article>
+          <p>Production <b>Scalability</b> trumps everything, a frontend solution is nothing if it can't scale. I don't mind sacrificing convenience for it. In the same sense, I don't mind disregarding other steps in my approach for advances in this facet.</p>
+          <p><b>Brevity</b> is hard but necessary, making the same solutions perform the same or better in a smaller or simpler package. Simple is not easy, it will require more thought than obvious solutions. Not only is it good practice, it helps with scalability in this context. This also means less dependencies.</p>
+          <blockquote>
+            <p>&ldquo;I didn't have time to write a short letter, so I wrote a long one instead.&rdquo;<br>- Mark Twain</p>
+          </blockquote>
+          <p>Sufficient <b>Tooling</b> is convenient. It is important that a build of a project can be run with a single command and output a single deployable package, this subsequently improves <b>Extensibility</b> and assists in optimizing for Scalability in production and in the codebase.</p>
+          <p>I find that <b>Modularity</b> only helps when it will be utilized significantly, and unnecesarilly making code modular in the frontend simply adds under-utilized payload.</p>
+        </article>
+      </div> <!-- frontend approach -->
+
+
+
+
+  </main>
+</div>
+
+
+    <footer>
+    </footer>
+  </body>
+</html>

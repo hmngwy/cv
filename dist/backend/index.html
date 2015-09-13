@@ -1,0 +1,123 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <title>Pat Ambrosio</title>
+
+    <base href="/cv/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Neuton:400,300,400italic,700,200' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="/assets/css/nostrap.css">
+    <link rel="stylesheet" href="/assets/bower/chartist/dist/chartist.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="/assets/bower/chartist/dist/chartist.js"></script>
+    <script src="/assets/bower/Hyphenator/Hyphenator.js"></script>
+    <!-- endbuild -->
+
+    <script type="text/javascript">
+      Hyphenator.run();
+    </script>
+  </head>
+  <body>
+
+    
+<div class="wrap">
+
+  <main>
+
+    <section id="backend">
+      <header>
+        <h3>Back End</h3>
+        <nav>
+          <ul>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Approach</a></li>
+            <li><a href="#">Experience</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <p class="intro">The scores are relative to each other in the same class. These are based on my experience/preference in practical use, the rating is higher for tech where I've been more successful.</p>
+
+      <div class="chart ct-backend ct-golden-section"></div>
+      <script>
+      new Chartist.Bar('.ct-backend', {
+        labels: [
+          'JS ES5, Python, PHP 5',
+          'Express, Django',
+          'Mongo, MySQL, GQL',
+        ],
+        series: [
+          [90, 80, 80],
+          [50, 40, 60],
+          [40, 0, 30]
+        ]
+      }, {
+        seriesBarDistance: 10,
+        axisX: {
+          offset: 60
+        },
+        axisY: {
+          offset: 0,
+          labelInterpolationFnc: function(value) {
+            return '';
+          },
+          scaleMinSpace: 15
+        }
+      });
+      </script>
+
+      <article>
+        <p></p>
+      </article>
+
+      <header>
+        <h3>Approach</h3>
+        <p class="intro"></p>
+      </header>
+      <div class="chart ct-backend-priority ct-golden-section"></div>
+      <script>
+      new Chartist.Pie('.ct-backend-priority', {
+        labels: ['Scalability', 'Modularity', 'Runtime', 'Brevity'],
+        series: [30, 40, 20, 10]
+      }, {
+        labelInterpolationFnc: function(value) {
+          return value[0]
+        },
+        donut: true
+      }, [
+        ['screen and (min-width: 640px)', {
+          chartPadding: 40,
+          labelOffset: 50,
+          labelDirection: 'explode',
+          labelInterpolationFnc: function(value) {
+            return value;
+          }
+        }],
+        ['screen and (min-width: 1024px)', {
+          chartPadding: 40,
+          labelOffset: 60,
+        }]
+      ]);
+      </script>
+
+      <article>
+        <p></p>
+      </article>
+    </section> <!-- backend -->
+
+
+
+  </main>
+</div>
+
+
+    <footer>
+    </footer>
+  </body>
+</html>
