@@ -358,6 +358,15 @@ ul.legend {
   margin: auto;
   padding: 1.5em .5em;
 }
+.wrap.experience h4 {
+  margin-top: 0;
+  margin-bottom: 2em;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 200;
+  text-align: center;
+}
 .wrap.experience article {
   padding-top: 0;
 }
