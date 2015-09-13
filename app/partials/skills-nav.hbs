@@ -1,0 +1,16 @@
+<nav class="main">
+  <ul>
+    <li {{#if home}}class="active"{{/if}}><a href="/">Summary</a></li>
+    <li {{#if career}}class="active"{{/if}}><a href="/career.html">Career</a></li>
+    <li {{#if other}}class="active"{{/if}}><a href="/personal.html">Personal</a></li>
+  </ul>
+</nav>
+<nav class="main sub">
+  <ul>
+    <li {{#if management}}class="active"{{/if}}><a href="./management.html">Management</a></li>
+    <li {{#if frontend}}class="active"{{/if}}><a href="./frontend.html">Front End</a></li>
+    <li {{#if backend}}class="active"{{/if}}><a href="./backend.html">Back End</a></li>
+    <li {{#if sysad}}class="active"{{/if}}><a href="./sysad.html">Sys Ad</a></li>
+    <li {{#if uiux}}class="active"{{/if}}><a href="./uiux.html">UI/UX</a></li>
+  </ul>
+</nav>
