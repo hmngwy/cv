@@ -364,13 +364,14 @@ ul.legend {
 .experience .experience-item {
   margin-bottom: 4em;
 }
-#landing .intro {
+#career .intro {
   max-width: 50ch;
   margin: auto;
   text-align: center;
   font-size: 1.2em;
   margin-bottom: 2em;
   font-weight: normal;
+  line-height: 1.3em;
 }
 #personal .wrap {
   max-width: 80ch;
@@ -393,6 +394,7 @@ ul.legend {
 }
 #personal .intro {
   font-weight: normal;
+  line-height: 1.3em;
   font-size: 1.3em;
   max-width: 80ch;
 }
