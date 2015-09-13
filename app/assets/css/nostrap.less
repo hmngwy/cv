@@ -1,0 +1,172 @@
+/*
+line-height = margin
+*/
+body {
+  font: normal normal normal 22px/1.3em 'Neuton', serif;
+  margin: 1.4em auto;
+  max-width: 65ch;
+  background-color: #fefefe;
+  /* -webkit-font-smoothing: antialiased; */
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+}
+
+/* Anchors */
+a, ins, u {
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(rgba(51, 51, 51, 0.25) 0%, rgb(51, 51, 51) 100%);
+  background-image: linear-gradient(rgba(51, 51, 51, 0.25) 0%, rgb(51, 51, 51) 100%);
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  background-position: 0 96%;
+  text-shadow: 3px 0 #fefefe, 2px 0 #fefefe, 1px 0 #fefefe, -1px 0 #fefefe, -2px 0 #fefefe, -3px 0 #fefefe;
+}
+ins {
+  background-image: -webkit-linear-gradient(rgba(51, 51, 51, 0.7) 0%, rgb(51, 51, 51) 100%);
+  background-image: linear-gradient(rgba(51, 51, 51, 0.7) 0%, rgb(51, 51, 51) 100%);
+  background-size: 2px 2px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.75), (min-resolution: 168dpi) {
+  a, ins, u {
+    background-image: -webkit-linear-gradient(rgba(51, 51, 51, 0.25) 0%, rgb(51, 51, 51) 100%);
+    background-image: linear-gradient(rgba(51, 51, 51, 0.25) 0%, rgb(51, 51, 51) 100%);
+    /* text-shadow: 4px 0 #fefefe, 3px 0 #fefefe, 2px 0 #fefefe, -2px 0 #fefefe, -3px 0 #fefefe, -4px 0 #fefefe; */
+    /* background-size: 2px 2px; */
+    background-position: 0 95%;
+  }
+}
+a:hover {
+  color: rgb(51, 51, 51);
+  background-image: -webkit-linear-gradient(top, rgb(51, 51, 51) 0%, rgb(51, 51, 51) 100%);
+  background-image: linear-gradient(to bottom, rgb(51, 51, 51) 0%, rgb(51, 51, 51) 100%);
+}
+
+a::selection,
+a > *::selection {
+  background-color: beige;
+  text-shadow: none;
+}
+
+/* Lists */
+ol,
+ul {
+  padding: 0;
+}
+ol ul,
+ol ol,
+ul ul,
+ul ol {
+  padding: 0 1em;
+}
+
+/* Paragraphs */
+p + p {
+  margin-top: -1em;
+  text-indent: 1.4em;
+}
+p.dropcap:first-letter {
+  font-size: 3.13em;
+  line-height: .725em;
+  float: left;
+  letter-spacing: .05em;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin: 1em 0;
+}
+h1 {
+  font-size: 2.1708em;
+}
+h2 {
+  font-size: 1.6854em;
+}
+h3 {
+  font-size: 1.3618em;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5, h6 {
+  font-size: 1.0382em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+h6 {
+  font-weight: normal;
+}
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6 {
+  text-align: center;
+}
+
+/* Blockquotes */
+blockquote {
+  box-sizing: border-box;
+  border-left: 1px solid lightgrey;
+  margin: 1em;
+  padding: 0 1em;
+}
+
+/* Definition Lists */
+dt {
+  font-weight: bold;
+}
+dt:after {
+  content: ' —';
+}
+dd {
+  margin: 0;
+  padding-left: .75em;
+  border-left: 1px solid lightgrey;
+}
+
+/* Horizontal Rules */
+hr {
+  width: calc(100% - 2em);
+  margin: auto;
+  color: grey;
+  border: 0;
+  border-top: 1px dashed;
+  text-align: center;
+}
+
+/* Tables */
+table {
+  border-spacing: .1em;
+}
+caption, thead, tfoot, tbody {
+  text-align: left;
+}
+thead {
+  background-color: whitesmoke;
+
+}
+thead th {
+  font-weight: 200;
+}
+tbody {
+  background-color: rgba(245, 245, 245, 0.5);
+}
+tfoot {
+  background-color: whitesmoke;
+  font-weight: normal;
+}
+th, td {
+  padding: .5em;
+}
+
+sup, sub {
+  line-height: 1em;
+}
