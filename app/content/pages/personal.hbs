@@ -1,0 +1,138 @@
+{{> main-nav other='1'}}
+<div class="hyphenate">
+
+  <main>
+
+    <section id="landing">
+
+      <article>
+        <div class="wrap">
+        <p>Interests, add photos to show taste, link to articles, etc</p>
+
+        </div>
+      </article>
+
+      <article>
+        <div class="with-chart">
+          <div class="text">
+            <h4>Skills</h4>
+            <p class="intro">I have a handle on multiple facets of Software Development, including non-dev roles like Management and Design.</p>
+            <p class="dblspace">I have a well rounded skillset and can be reliable in specializing in any one facet. I regard myself most applicable in UI Development. My corporate background would indicate I can carry out Leadership roles.</p>
+            <p>This visualization is the distribution of my skills grouped by category. This is based upon proficiency and confidence in practical use. As a whole it reflects my coverage in Technical Leadership.</p>
+          </div>
+          <div class="chart ct-general ct-golden-section"></div>
+        </div>
+      </article>
+      <script>
+      var data = {
+        labels: ['Front End', 'Back End', 'Management', 'UI/UX', 'Sys Ad'],
+        series: [30, 25, 20, 15, 10]
+      };
+
+      var options = {
+        labelInterpolationFnc: function(value) {
+          return value[0]
+        },
+        donut: true
+      };
+
+      var responsiveOptions = [
+        ['screen and (min-width: 450px)', {
+          chartPadding: 40,
+          labelOffset: 50,
+          labelDirection: 'explode',
+          labelInterpolationFnc: function(value) {
+            return value;
+          }
+        }],
+        ['screen and (min-width: 1024px)', {
+          chartPadding: 40,
+          labelOffset: 60,
+        }]
+      ];
+
+      new Chartist.Pie('.ct-general', data, options, responsiveOptions);
+      </script>
+
+
+      <article>
+        <div class="wrap">
+          <h4>Design Approach</h4>
+          <p>I loosely follow a priority-based approach in designing and developing applications. In general, User Experience is first priority, followed closely by Performance and Scalability. The rest are shuffled around variably to compensate for compromises in any of the first two priorities.</p>
+          <p>In terms of tech stack, I am heavily invested in server-side JS, non-relational databases, lean front end tech, and AWS Cloud platform for staging and deployment.</p>
+        </div>
+      </article>
+
+      <article class="management">
+        <div class="with-chart">
+          <div class="text">
+            <h4>Experience</h4>
+            <p>My corporate background is for the most part Technical Management and Leadership, for 4 years in one company. I have handled UI Design and Development projects as a contractor. I also maintain a handful of full-stack <a href="https://github.com/hmngwy/brook">personal projects</a>, which would speak best about my personal approach in development.</p>
+            <ul class="legend">
+              <li class="dev">Development</li>
+              <li class="mgt">Management</li>
+              <li class="tcl">Technical Leadership</li>
+            </ul>
+            <p>This chart shows the timeline of roles I filled in, as well as the overlaps and intersections in responsibilities.</p>
+
+          </div>
+          <div class="chart ct-experience ct-golden-section"></div>
+        </div>
+      </article>
+      <script type="text/javascript">
+        new Chartist.Line('.ct-experience', {
+          labels: ['2008', '', '10', '', '12', '', '14', 'Now', ''],
+          series: [
+            [9, 9, 8, 4, 3, 2, 9, 9, 9], //dev
+            [0, .3, 2, 4, 8, 8, 5, 5, 5], //tech lead
+            [0, .3, 4, 8, 9, 9, 2, 2, 2], //mgt
+          ]
+        }, {
+          high: 10,
+          low: 0,
+          showArea: true,
+          showLine: false,
+          showPoint: false,
+          fullWidth: true,
+          axisX: {
+            showLabel: true,
+            showGrid: false
+          },
+          axisY: {
+            showLabel: false,
+            showGrid: true
+          }
+        }, [
+          ['screen and (min-width: 450px)', {
+            chartPadding: 40,
+            // lineSmooth: Chartist.Interpolation.simple(),
+          }],
+          ['screen and (min-width: 1024px)', {
+            // chartPaddingRight: 80
+          }]
+        ]);
+      </script>
+
+    </section> <!-- landing -->
+
+
+    <article class="management">
+      <div class="wrap">
+        <h4>Looking For Work</h4>
+        <p>I am looking for work in either of the following fields.</p>
+        <ul>
+
+          <li><b>Technical Leadership and Development</b>, I have been succesful in this field during my corporate stint, and I am looking to further hone my skills here. If you are building an office, launching a new department, or have an existing team that needs technical guidance, we may be a good match.</li>
+
+          <li><b>UI/UX Development and Design</b>, I am new to this but I have some work experience and it has always been a big interest of mine, I wish to explore this field further as well as someday find a place for myself in its community. I'm looking for someone who needs help in UI Engineering where I can be immediately applicable, as well as someone who is willing to teach or apprentice in terms of UX Design.</li>
+
+          <li><b>Product Design &amp; Development</b>. I have an affinity for minimal specific solutions more than general swiss-army-knife solutions. I have an understanding of Software Development methods (including Lean), as well as fully capable in prototyping or engineering in any development facet. I value growth and scale as much as I value code. I am fine with fast iteration rounds, rapid protoyping, and validating ideas through testing or research. If this is you, we might make a good match.</li>
+
+        </ul>
+
+      </div>
+    </article>
+
+
+  </main>
+</div>
